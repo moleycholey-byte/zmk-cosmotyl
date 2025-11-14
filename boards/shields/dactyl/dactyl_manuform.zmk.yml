@@ -7,5 +7,5 @@ requires: [pro_micro]
 features:
   - keys
 siblings:
-  - dactyl_manuform_left
-  - dactyl_manuform_right
+  - dactyl_left
+  - dactyl_right
