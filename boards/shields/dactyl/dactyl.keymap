@@ -25,7 +25,7 @@
 
         raise_layer {
             bindings = <
-                &kp GRAVE &kp ! &kp @ &kp # &kp $ &kp % 					&kp ^ &kp &kp * &kp LPAR &kp RPAR &kp _                        
+                &kp GRAVE &kp ! &kp @ &kp # &kp $ &kp % 					&kp ^ &kp & &kp * &kp LPAR &kp RPAR &kp _                        
                 &trans &kp PSCRN &trans &trans &trans                       &trans &trans &trans &trans &trans &trans
                 &trans &kp K_VOL_UP  &kp K_PP &kp C_BRI_UP &trans &trans    &trans &trans &trans &trans &trans &trans 
                 &kp K_MUTE &kp K_VOL_DN  &kp K_STOP2 &kp C_BRI_DN     		&trans &trans &trans &trans &trans &trans                                                    
