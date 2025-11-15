@@ -49,31 +49,31 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)          RC(3,11) RC(3,10) RC(3,
         kscan = <&kscan0>;
         keys  //                     w   h    x    y     rot    rx    ry
             // Row 1 (12 keys)
-            = <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            = <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
 
             // Row 2 (12 keys)
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
             
             // Row 3 (12 keys)
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
             
             // Row 4 (12 keys)
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
             
             // Row 5 (8 keys) - The physical layout doesn't need to align, but it helps for visualization.
             // For a clean visualization, you might want to adjust the X offset of these 8 keys
             // to make them appear centered under the 12 columns, but this is a complex detail.
             // For a simple definition, we just list the 8 keys:
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
-            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+           <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>
             ;
     };
 
