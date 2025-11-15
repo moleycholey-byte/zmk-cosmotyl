@@ -1,9 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &default_layout;
     };
 
     default_transform: keymap_transform_0 {
@@ -40,52 +42,79 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)          RC(3,11) RC(3,10) RC(3,
 
     };
 
-key_physical_attrs: key_physical_attrs {
-        compatible = "zmk,key-physical-layout";
-        label = "DEFAULT_1U";
-        #key-cells = <7>;
-        w = <1000>; // 1 unit width
-        h = <1000>; // 1 unit height
-        x = <0>;
-        y = <0>;
-        r = <0>;
-        rx = <0>;
-        ry = <0>;
-    };
+default_layout: default_layout {
+    compatible = "zmk,physical-layout";
+    display-name = "12x5 Ortholinear";
+    transform = <&default_transform>;
 
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Dactyl 5x6";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-        keys  //                     w   h    x    y     rot    rx    ry
-            // Row 1 (12 keys)
-            = <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
+    keys
+    // Row 1 (12 keys) - Y = 0
+       = <&key_physical_attrs 100 100   0   0    0    0    0>
+       , <&key_physical_attrs 100 100 100   0    0    0    0>
+       , <&key_physical_attrs 100 100 200   0    0    0    0>
+       , <&key_physical_attrs 100 100 300   0    0    0    0>
+       , <&key_physical_attrs 100 100 400   0    0    0    0>
+       , <&key_physical_attrs 100 100 500   0    0    0    0>
+       , <&key_physical_attrs 100 100 600   0    0    0    0>
+       , <&key_physical_attrs 100 100 700   0    0    0    0>
+       , <&key_physical_attrs 100 100 800   0    0    0    0>
+       , <&key_physical_attrs 100 100 900   0    0    0    0>
+       , <&key_physical_attrs 100 100 1000  0    0    0    0>
+       , <&key_physical_attrs 100 100 1100  0    0    0    0>
 
-            // Row 2 (12 keys)
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            
-            // Row 3 (12 keys)
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            
-            // Row 4 (12 keys)
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            
-            // Row 5 (8 keys) - The physical layout doesn't need to align, but it helps for visualization.
-            // For a clean visualization, you might want to adjust the X offset of these 8 keys
-            // to make them appear centered under the 12 columns, but this is a complex detail.
-            // For a simple definition, we just list the 8 keys:
-           <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>,
-            <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>, <&key_physical_attrs>
-            ;
-    };
+    // Row 2 (12 keys) - Y = 100
+       , <&key_physical_attrs 100 100   0 100    0    0    0>
+       , <&key_physical_attrs 100 100 100 100    0    0    0>
+       , <&key_physical_attrs 100 100 200 100    0    0    0>
+       , <&key_physical_attrs 100 100 300 100    0    0    0>
+       , <&key_physical_attrs 100 100 400 100    0    0    0>
+       , <&key_physical_attrs 100 100 500 100    0    0    0>
+       , <&key_physical_attrs 100 100 600 100    0    0    0>
+       , <&key_physical_attrs 100 100 700 100    0    0    0>
+       , <&key_physical_attrs 100 100 800 100    0    0    0>
+       , <&key_physical_attrs 100 100 900 100    0    0    0>
+       , <&key_physical_attrs 100 100 1000 100    0    0    0>
+       , <&key_physical_attrs 100 100 1100 100    0    0    0>
+
+    // Row 3 (12 keys) - Y = 200
+       , <&key_physical_attrs 100 100   0 200    0    0    0>
+       , <&key_physical_attrs 100 100 100 200    0    0    0>
+       , <&key_physical_attrs 100 100 200 200    0    0    0>
+       , <&key_physical_attrs 100 100 300 200    0    0    0>
+       , <&key_physical_attrs 100 100 400 200    0    0    0>
+       , <&key_physical_attrs 100 100 500 200    0    0    0>
+       , <&key_physical_attrs 100 100 600 200    0    0    0>
+       , <&key_physical_attrs 100 100 700 200    0    0    0>
+       , <&key_physical_attrs 100 100 800 200    0    0    0>
+       , <&key_physical_attrs 100 100 900 200    0    0    0>
+       , <&key_physical_attrs 100 100 1000 200    0    0    0>
+       , <&key_physical_attrs 100 100 1100 200    0    0    0>
+
+    // Row 4 (12 keys) - Y = 300
+       , <&key_physical_attrs 100 100   0 300    0    0    0>
+       , <&key_physical_attrs 100 100 100 300    0    0    0>
+       , <&key_physical_attrs 100 100 200 300    0    0    0>
+       , <&key_physical_attrs 100 100 300 300    0    0    0>
+       , <&key_physical_attrs 100 100 400 300    0    0    0>
+       , <&key_physical_attrs 100 100 500 300    0    0    0>
+       , <&key_physical_attrs 100 100 600 300    0    0    0>
+       , <&key_physical_attrs 100 100 700 300    0    0    0>
+       , <&key_physical_attrs 100 100 800 300    0    0    0>
+       , <&key_physical_attrs 100 100 900 300    0    0    0>
+       , <&key_physical_attrs 100 100 1000 300    0    0    0>
+       , <&key_physical_attrs 100 100 1100 300    0    0    0>
+
+    // Row 5 (8 keys) - Centered - Y = 400
+    // Total width is 1200. 8 keys is 800 wide. Centering requires an offset of (1200 - 800) / 2 = 200.
+       , <&key_physical_attrs 100 100 200 400    0    0    0> // Start at X=200
+       , <&key_physical_attrs 100 100 300 400    0    0    0>
+       , <&key_physical_attrs 100 100 400 400    0    0    0>
+       , <&key_physical_attrs 100 100 500 400    0    0    0>
+       , <&key_physical_attrs 100 100 600 400    0    0    0>
+       , <&key_physical_attrs 100 100 700 400    0    0    0>
+       , <&key_physical_attrs 100 100 800 400    0    0    0>
+       , <&key_physical_attrs 100 100 900 400    0    0    0> // End at X=900 (key corner)
+       ;
+};
 
 };
