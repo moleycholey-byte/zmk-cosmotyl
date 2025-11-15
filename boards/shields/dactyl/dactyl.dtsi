@@ -29,8 +29,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)          RC(3,11) RC(3,10) RC(3,
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-
         diode-direction = "row2col";
         row-gpios
             = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -45,7 +43,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)          RC(3,11) RC(3,10) RC(3,
 key_physical_attrs: key_physical_attrs {
         compatible = "zmk,key-physical-attributes";
         label = "DEFAULT_1U";
-        #key-cells;
+        #key-cells = <7>;
         w = <1000>; // 1 unit width
         h = <1000>; // 1 unit height
         x = <0>;
