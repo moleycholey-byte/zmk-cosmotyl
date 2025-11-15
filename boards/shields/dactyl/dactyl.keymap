@@ -51,5 +51,18 @@
                                                       &none &none  &none &none        &none &none   &none &none
             >;
         };
-    };
+
+	extra_layer_4 {
+		status = "reserved";
+	};
+
+	extra_layer_5 {
+		status = "reserved";
+	};
+
+	extra_layer_6 {
+		status = "reserved";
+	};
+
+	};
 };
