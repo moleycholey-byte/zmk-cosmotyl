@@ -8,7 +8,7 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <10>;
+        columns = <12>;
         rows = <5>;
 // | MX1  | MX2  | MX3  | MX4  | MX5  |                 | MX6  | MX7  | MX8  | MX9  | MX10 |
 // | MX11 | MX12 | MX13 | MX14 | MX15 |                 | MX16 | MX17 | MX18 | MX19 | MX20 |
@@ -41,4 +41,40 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)          RC(3,11) RC(3,10) RC(3,
             ;
 
     };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Dactyl 5x6";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+        keys  //                     w   h    x    y     rot    rx    ry
+            // Row 1 (12 keys)
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+
+            // Row 2 (12 keys)
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            
+            // Row 3 (12 keys)
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            
+            // Row 4 (12 keys)
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            
+            // Row 5 (8 keys) - The physical layout doesn't need to align, but it helps for visualization.
+            // For a clean visualization, you might want to adjust the X offset of these 8 keys
+            // to make them appear centered under the 12 columns, but this is a complex detail.
+            // For a simple definition, we just list the 8 keys:
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs> <&key_physical_attrs>
+            ;
+    };
+
 };
